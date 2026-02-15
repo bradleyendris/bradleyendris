@@ -1,4 +1,4 @@
-# Hey, I'm Brad 👋
+# Hey, I'm Brad 
 
 **Cybersecurity Student | AI Automation Enthusiast | Python Developer**
 
@@ -13,7 +13,7 @@ Building skills in AI automation, cloud security, and intelligent systems while 
  Education       → BS CIS (Cybersecurity) @ UofL - Graduating May 2026
  Current Role    → Air Handler @ UPS | IT & Manufacturing Co-op @ Stronghold
  Focus Areas     → AI Automation | Security Automation | Cloud Security
- Certs           → CompTIA A+ | CompTIA Network+
+ Certs           → Computer Tech Basics | Net+ Prep | A+ Prep
 ```
 
 ---
@@ -37,18 +37,11 @@ Building skills in AI automation, cloud security, and intelligent systems while 
 ##  Featured Projects
 
 ###  AI & Automation
-- **[Workout Split Generator](https://github.com/bradleyendris/workout-split-generator)** - Python CLI app using algorithms to generate personalized workout plans based on user preferences and training goals
 - **[AI Automation Projects](https://github.com/bradleyendris/ai-automation)** - Collection of AI-powered automation scripts and intelligent systems *(coming soon)*
 
-###  Security & Cloud
-- **[Cloud Security Lab](https://github.com/bradleyendris/cloud-security-lab)** - AWS security configurations and cloud security best practices *(coming soon)*
-- **[Security Automation Scripts](https://github.com/bradleyendris/security-automation)** - Python scripts for automating security tasks *(coming soon)*
 
 ###  Development Projects
-- **[Fortune Teller App](https://github.com/bradleyendris/fortune-teller)** - Team project demonstrating OOP principles in C#/Java
 - **[Python Portfolio](https://github.com/bradleyendris/python-portfolio)** - Collection of Python projects and automation tools *(coming soon)*
-
-*Building my portfolio one project at a time...*
 
 ---
 
