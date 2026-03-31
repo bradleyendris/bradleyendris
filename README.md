@@ -10,7 +10,7 @@ Building skills in AI automation, cloud security, and intelligent systems while 
 
 ```
  Location        → New Albany, IN (Louisville area)
- Education       → BS CIS (Cybersecurity) @ UofL - Graduating May 2026
+ Education       → BS CIS (Cybersecurity)(Business Project Management) @ UofL - Graduating May 2026
  Current Role    → Air Handler @ UPS | IT & Manufacturing Co-op @ Stronghold
  Focus Areas     → AI Automation | Security Automation | Cloud Security
  Certs           → Computer Tech Basics | Net+ Prep | A+ Prep
