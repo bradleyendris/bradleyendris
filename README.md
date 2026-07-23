@@ -36,6 +36,9 @@ Building skills in AI automation, cloud security, and intelligent systems while 
 
 ##  Featured Projects
 
+###  Security Automation
+- **[SOC Alert Triage Analyst](soc-alert-triage/)** - LLM system prompt that triages security alerts (Wazuh JSON) into structured, evidence-cited verdicts with confidence scoring and MITRE ATT&CK mapping
+
 ###  AI & Automation
 - **[AI Automation Projects](https://github.com/bradleyendris/ai-automation)** - Collection of AI-powered automation scripts and intelligent systems *(coming soon)*
 

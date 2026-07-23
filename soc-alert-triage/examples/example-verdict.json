@@ -1,0 +1,50 @@
+{
+  "verdict": "likely_true_positive",
+  "severity": "high",
+  "confidence": 85,
+  "summary": "External IP 203.0.113.47 made repeated failed SSH logins against multiple accounts on internet-facing production server web-prod-02, then successfully authenticated as the 'deploy' service account from a source not in its expected login list. Confidence is held below certain because no threat intel on the source IP and no post-login activity data were provided.",
+  "key_evidence": [
+    {
+      "claim": "Six failed SSH password attempts from 203.0.113.47 within ~3 minutes, including guesses against non-existent users 'admin' and 'root'",
+      "source_field": "alert.previous_output"
+    },
+    {
+      "claim": "The same source IP then successfully authenticated as user 'deploy' via password",
+      "source_field": "alert.full_log"
+    },
+    {
+      "claim": "The 'deploy' account is a CI/CD service account not expected to log in interactively, and 203.0.113.47 is not in its expected login sources",
+      "source_field": "context.user"
+    },
+    {
+      "claim": "The affected host is a high-criticality, internet-facing production web server",
+      "source_field": "context.asset"
+    },
+    {
+      "claim": "The same source IP triggered prior brute-force and non-existent-user alerts on this host in the preceding 20 minutes",
+      "source_field": "context.recent_alerts"
+    }
+  ],
+  "attack_techniques": [
+    {
+      "technique_id": "T1110",
+      "name": "Brute Force",
+      "justification": "Mapped by the alert itself (alert.rule.mitre) and consistent with the repeated failed logins across multiple usernames in alert.previous_output"
+    }
+  ],
+  "evidence_gaps": [
+    "No threat intel reputation data for source IP 203.0.113.47",
+    "No post-login activity (commands, sessions, outbound connections) for the successful 'deploy' login",
+    "Unknown whether the 'deploy' account password was recently rotated or is shared",
+    "No geolocation or ASN information for the source IP"
+  ],
+  "recommended_actions": [
+    "Review sshd and shell history on web-prod-02 for activity by 'deploy' after 2026-07-21T03:17:41Z",
+    "Consider resetting the 'deploy' account credential and rotating any secrets it can access",
+    "Consider blocking or rate-limiting 203.0.113.47 at the perimeter pending investigation",
+    "Check other internet-facing hosts for authentication attempts from 203.0.113.47",
+    "Evaluate enforcing key-based authentication for service accounts on this host"
+  ],
+  "escalate": true,
+  "escalation_reason": "Likely successful credential-access attack on a high-criticality internet-facing production server; a service account shows an authenticated session from an unexpected external source."
+}
